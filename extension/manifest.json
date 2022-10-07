@@ -1,0 +1,25 @@
+{
+    "name": "VFS global OTP verifier",
+    "version": "1.0.0",
+    "description": "email OTP verifier",
+    "manifest_version": 3,
+    "author": "Md Salah",
+    "permissions": [
+      "storage",
+      "activeTab",
+      "scripting"
+    ],
+
+    "action":{
+        "default_popup": "popup.html",
+        "default_title": "OTP verifier"
+    },
+
+    "content_scripts": [
+        {
+          "matches": ["https://online.vfsglobal.dz/Global-Appointment/Applicant/ApplicantList"],
+          "js": ["script.js"]
+        }
+      ]
+    
+}
